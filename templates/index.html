@@ -1,0 +1,19 @@
+<html>
+   <head>
+      <title>Home</title> 
+
+   </head>
+   <body>
+      <form action="http://localhost:5000/uploader" method="POST" enctype="multipart/form-data">
+         <input type="file" name="file" />
+         <input type="submit" />
+      </form>
+
+      <h2>Ảnh gốc</h2>
+      <img src="{{ url_for('static', filename=filename) }}" alt="Ảnh gốc">
+      
+      <h2>Ảnh grayscale</h2>
+      <img src="{{ url_for('static', filename=grayscale_filename) }}" alt="Ảnh grayscale">
+
+   </body>
+</html>
